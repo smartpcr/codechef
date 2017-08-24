@@ -13,7 +13,8 @@ import java.util.InputMismatchException;
  * Created by xd on 8/23/17.
  *
  * Problem description.
- You are given a tree. If we select 2 distinct nodes uniformly at random, what's the probability that the distance between these 2 nodes is a prime number?
+ You are given a tree. If we select 2 distinct nodes uniformly at random, what's the probability that the distance
+ between these 2 nodes is a prime number?
 
  Input
  The first line contains a number N: the number of nodes in this tree.

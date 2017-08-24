@@ -20,7 +20,7 @@ the list.
 
 The cooks logged which jobs they finished before they left. Unfortunately, these jobs were not recorded in any
 particular order. Given an unsorted list of finished jobs, you are to determine which jobs the Chef must complete and
-which jobs his assitant must complete before closing the kitchen for the evening.
+which jobs his assistant must complete before closing the kitchen for the evening.
 
 Input
 The first line contains a single integer T ≤ 50 indicating the number of test cases to follow. Each test case consists
@@ -54,7 +54,7 @@ Output:
 2 5 7
  */
 public class CleaningUp implements Runnable {
-    public static void main(String args[]){
+    public static void main(String args[]) {
         new CleaningUp().run();
     }
 
@@ -62,8 +62,8 @@ public class CleaningUp implements Runnable {
     public static final String OUTPUT_FILE = "output.out";
 
     @Override
-    public void run(){
-        try{
+    public void run() {
+        try {
 //        in = new BufferedReader(new FileReader(INPUT_FILE));
 //        out = new PrintWriter(new BufferedWriter(new FileWriter(OUTPUT_FILE)));
             in = new BufferedReader(new InputStreamReader(System.in));
@@ -73,27 +73,26 @@ public class CleaningUp implements Runnable {
             in.close();
             out.close();
 
-        }
-        catch(IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
             System.exit(0);
         }
     }
 
-    int nextInt()throws IOException{
+    int nextInt() throws IOException {
         return Integer.parseInt(nextToken());
     }
 
-    double nextDouble()throws IOException{
+    double nextDouble() throws IOException {
         return Double.parseDouble(nextToken());
     }
 
-    long nextLong() throws IOException{
+    long nextLong() throws IOException {
         return Long.parseLong(nextToken());
     }
 
-    String nextToken()throws IOException{
-        while(tok == null || !tok.hasMoreTokens()){
+    String nextToken() throws IOException {
+        while (tok == null || !tok.hasMoreTokens()) {
             tok = new StringTokenizer(in.readLine());
         }
         return tok.nextToken();
@@ -105,29 +104,28 @@ public class CleaningUp implements Runnable {
     //////////////////////////////////////////////////////////////////
 
 
-
     private void solve() throws IOException {
         int T = nextInt();
-        while(T-- > 0){
+        while (T-- > 0) {
             solvenow();
         }
 
     }
 
-    private void solvenow() throws IOException{
+    private void solvenow() throws IOException {
         int N = nextInt();
         int M = nextInt();
         boolean[] arr = new boolean[N];
-        for(int i = 0; i < M; i++) arr[nextInt() - 1] = true;
+        for (int i = 0; i < M; i++) arr[nextInt() - 1] = true;
 
         int count = 0;
         String chefwork = "";
         String helperwork = "";
 
-        for(int i = 0; i < N ; i++){
-            if(! arr[i]){
+        for (int i = 0; i < N; i++) {
+            if (!arr[i]) {
                 count++;
-                if(count % 2 == 1) chefwork += (i + 1) + " ";
+                if (count % 2 == 1) chefwork += (i + 1) + " ";
                 else helperwork += (i + 1) + " ";
             }
         }

@@ -123,7 +123,6 @@ public class RacingHorses {
 
 }
 
-
 class FastReader {
     private InputStream stream;
     private byte[] buf = new byte[1024];
