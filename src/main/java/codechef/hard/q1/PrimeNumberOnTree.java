@@ -60,7 +60,7 @@ public class PrimeNumberOnTree {
     int nn = 0;
     long ans = 0;
     HashSet<Integer> a[] = new HashSet[N];
-    ArrayList<Integer> prime = new ArrayList<Integer>();
+    ArrayList<Integer> prime = new ArrayList<>();
     void solve() {
         prime();
         n = ni();
